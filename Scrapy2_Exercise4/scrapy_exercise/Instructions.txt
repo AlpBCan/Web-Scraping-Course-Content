@@ -1,0 +1,35 @@
+IT'S YOUR TURN!
+Try to do this on your own. If you are stuck, take a look at the solution for that part and
+come back to your code.
+
+
+-Create a project named quotes
+
+-Get into the project folder using terminal
+
+-Create a spider called quotespider for website quotes.toscrape.com
+
+-Open items.py, create a QuoteItem with fields; quote, author, tags and import this item in
+the spider page
+
+-Construct the parse function to get necessary data(Your program will start to scrape from
+page 1 by default (starturls)):
+
+-Create a list of quotes on the first page
+
+-Start a loop in this list
+
+        -For every loop create an instance of QuoteItem
+
+        -From every quote on page, scrape quote text, author and tags
+        (for tags, develop a logic to combine them in one string)
+        HINT: you can use   ', '.join(tag_list)
+
+        -Put them in the QuoteItem you created and yield this item
+
+-Check if there is a next page
+
+-If there is, make request to the next page using response.follow, use a callback function to
+repeat the procedure above
+
+-Run your spider from the terminal, use an expression to save the data to a json file
